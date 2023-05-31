@@ -10,8 +10,8 @@ def index(request):
     return render(request, "index.html")
 def signin(request):
     return render(request, "signin.html")
-def prodjects(request):
-    return render(request, "prodjects.html")
+def info(request):
+    return render(request, "info.html")
 def login(request):
     return render(request, "login.html")
 def test(request):
