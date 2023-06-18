@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+{% block title %}
+    Новости
+{% endblock title %}
+
+{% block container %}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Main</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+<div class="album py-5 bg-body-tertiary">
+   <h2 align="center">Новости</h2>
+   <br>
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'image/news1.jpg' %}">
+            <div class="card-body">
+              <h4>«Лежачие полицейские» — теперь армированы металлокордом</h4>
+              <p class="card-text">«Лежачие полицейские» — это искусственные дорожные неровности разной длины, которая выбирается, исходя из ширины дороги. «Лежачие полицейские» от компании «РР-СИСТЕМС» выделяются среди подобных сразу несколькими преимуществами. Так, они изготовлены из качественной резины, а не из отходов, и армированы металлокордом. Благодаря этому изделия не деформируются от нагрузки, срок их службы заметно выше. Крепления между блоками конструкции также отличаются повышенной прочностью. Кроме того, неровности содержат встроенные металлические диски для надежной фиксации на дорожном полотне и качественные светоотражающие элементы.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+              <img src="{% static 'image/news2.jpg' %}">
+              <div class="card-body">
+                <h4>В ассортименте появились ручные укладчики дорожной ленты</h4>
+                <p class="card-text">Ручной укладчик дорожной ленты ЛР-200 применяется при строительстве и ремонте автодорог, а также прочих инженерных сооружений, где используется битумная дорожная лента. Укладчик делает работу с такой лентой более простой, за счет чего растет скорость ремонта при том, что качество остается неизменно высоким. Что немаловажно, идет и экономия человеческих ресурсов: обслуживать ЛР-200 с легкостью может один человек. Это снижает и себестоимость строительства. Технология широко распространена в странах, где приняты традиционно высокие стандарты качества строительства и содержания дорог.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'image/news3.jpg' %}">
+            <div class="card-body">
+              <h4>Заказать нашу продукцию стало можно онлайн и по телефону</h4>
+              <p class="card-text">Нет времени ехать в офис? Теперь вы можете заказать продукцию нашей компании  через онлайн-форму или по телефону компании «РР-СИСТЕМС»:  напомним, мы выпускаем исчерпывающее количество марок битумных и полимерно-битумных материалов. Их свойства и параметры соответствуют ГОСТу, так как используется только качественное сырье – продукты нефтепереработки и современные полимеры, а собственное производство позволяет нам гарантировать полное соблюдение технологии. Описания и характеристики продукции можно найти в соответствующих разделах каталога, а детальную информацию о физико-химических свойствах мы предоставляем по запросу.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+{% endblock container %}

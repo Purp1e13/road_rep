@@ -27,16 +27,22 @@
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="/" class="nav-link px-2 text-white">Главная</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">О нас</a></li>
-          <li><a href="{%url 'info' %}" class="nav-link px-2 text-white">Наши проекты</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Комнании</a></li>
+          <li><a href="{%url 'work' %}" class="nav-link px-2 text-white">Наши работы</a></li>
+          <li><a href="{%url 'news' %}" class="nav-link px-2 text-white">Новости</a></li>
+          <li><a href="{%url 'info' %}" class="nav-link px-2 text-white">Контакты</a></li>
+
         </ul>
+          {% if user.is_authenticated  %}
+           <p  class="nav-link px-2 text-white" style="color: white">  {{ user.username }}  </p>
+              <a class="nav-link px-2 text-white" href="{% url 'logout' %}">Выйти</a>
+          {% else %}
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2"><a href="{%url 'login' %}" class="nav-link px-2 text-white">Вход</a></button>
+            </div>
+
+          {% endif %}
 
 
-
-        <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2"><a href="{%url 'login' %}" class="nav-link px-2 text-white">Вход</a></button>
-        </div>
       </div>
     </div>
   </header>
@@ -68,27 +74,7 @@
       </ul>
     </div>
 
-    <div class="col mb-3">
-      <h5>Section</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-      </ul>
-    </div>
 
-    <div class="col mb-3">
-      <h5>Section</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-      </ul>
-    </div>
   </footer>
 
 </div>
