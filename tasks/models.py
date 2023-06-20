@@ -110,8 +110,8 @@ class Towns(models.Model):
     id_town = models.IntegerField(primary_key=True)
     name_of_town = models.CharField(max_length=30)
     town_status = models.IntegerField()
-    id_street = models.IntegerField(blank=True, null=True)
-    id_highway = models.IntegerField(blank=True, null=True)
+    id_street = models.ForeignKey(Streets, models.DO_NOTHING, db_column='id_street')
+    id_highway = models.ForeignKey(Highways, models.DO_NOTHING, db_column='id_highway')
 
     class Meta:
         managed = False
@@ -161,7 +161,7 @@ class Workers(models.Model):
     last_name = models.CharField(max_length=25, blank=True, null=True)
     telephon = models.CharField(max_length=15)
     e_mail = models.CharField(db_column='e-mail', max_length=25, blank=True, null=True)  # Field renamed to remove unsuitable characters.
-    photo = models.TextField(blank=True, null=True)
+    photo = models.BinaryField(blank=True, null=True)
     login = models.CharField(max_length=25)
     password = models.CharField(max_length=25)
     worker_status = models.IntegerField()

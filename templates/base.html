@@ -33,13 +33,13 @@
 
         </ul>
           {% if user.is_authenticated  %}
-           <p  class="nav-link px-2 text-white" style="color: white">  {{ user.username }}  </p>
-              <a class="nav-link px-2 text-white" href="{% url 'logout' %}">Выйти</a>
+           <!--<p  class="nav-link px-2 text-white" style="color: white">  {{ user.username }}  </p>-->
+                <a class="nav-link px-2 text-white" href="{% url 'tasks' %}">Профиль</a>
+                <a class="nav-link px-2 text-white" href="{% url 'logout' %}">Выйти</a>
           {% else %}
             <div class="text-end">
               <button type="button" class="btn btn-outline-light me-2"><a href="{%url 'login' %}" class="nav-link px-2 text-white">Вход</a></button>
             </div>
-
           {% endif %}
 
 
