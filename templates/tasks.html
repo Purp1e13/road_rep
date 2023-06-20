@@ -22,12 +22,13 @@
 
 <div class="container">
     <div class="row">
-        <div class = "col-md-6" >
+        <div class = "col-md-6" style="width: 30%">
             <div >
                 <!--<svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>-->
-                <img src="data:image/png;base64,{{ worker.id_brigade.photo }}" alt="Image" />
-
+                <!--<img src="{% static 'image/my_image.png' %}"  />-->
+                <br>
                 <h4 class="fw-normal">
+
                     <p>Фамилия: {{ worker.second_name }}</p>
                     <p>Имя: {{ worker.first_name }}</p>
                     <p>Отчество: {{ worker.last_name }}</p>
@@ -35,16 +36,16 @@
                 </h4>
           </div>
         </div>
-        <div class = "col-md-6">
+        <div class = "col-md-6" style="width: auto">
             {% if obj.count > 0 %}
             <h2>График работ</h2>
-            <table class="table table-striped table-sm">
+            <table class="table table-bordered bd-example m-0 border-0">
                 <thead><th>Дата начала работы</th><th>Дата окончания работы</th><th>Тип наряда</th><th>Город</th><th>Шоссе</th><th>Улица</th></thead>
                 {% for Tasks in obj %}
                     {% if Tasks.id_brigade.id_brigade == worker.id_brigade.id_brigade %}
                         <tr>
-                            <td>{{ Tasks.date_time_begin }}</td>
-                            <td>{{ Tasks.date_time_end }}</td>
+                            <td>{{ Tasks.date_time_begin|date:"d.m.Y" }}</td>
+                            <td>{{ Tasks.date_time_end|date:"d.m.Y" }}</td>
                             <td>{{ tt.name_type_task }}</td>
                             <td>{{ Tasks.id_place.id_town.name_of_town }}</td>
                             <td>{{ Tasks.id_place.id_town.id_highway.name_of_highway }}</td>

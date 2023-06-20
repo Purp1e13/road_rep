@@ -161,7 +161,7 @@ class Workers(models.Model):
     last_name = models.CharField(max_length=25, blank=True, null=True)
     telephon = models.CharField(max_length=15)
     e_mail = models.CharField(db_column='e-mail', max_length=25, blank=True, null=True)  # Field renamed to remove unsuitable characters.
-    photo = models.BinaryField(blank=True, null=True)
+    photo = models.TextField(blank=True, null=True)
     login = models.CharField(max_length=25)
     password = models.CharField(max_length=25)
     worker_status = models.IntegerField()
